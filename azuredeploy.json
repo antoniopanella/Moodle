@@ -638,7 +638,7 @@
             },
             "type": "string"
         },
-        "redisCacheKU": {
+        "redisCacheSKU": {
             "allowedValues": [
                 "Premium",
                 "Standard",
@@ -1284,6 +1284,9 @@
             "postgresVersion": "[parameters('postgresVersion')]",
             "redisCacheName": "[concat('redis-',variables('resourceprefix'))]",
             "redisDeploySwitch": "[parameters('redisDeploySwitch')]",
+            "redisCacheSKU": "[parameters('redisCacheSKU')]",
+            "redisCacheFamily": "[parameters('redisCacheFamily')]",
+            "redisCacheCapacity": "[parameters('redisCacheCapacity')]",
             "redisDns": "[concat('redis-',variables('resourceprefix'),'.redis.cache.windows.net')]",
             "resourcesPrefix": "[variables('resourceprefix')]",
             "searchType": "[parameters('searchType')]",
