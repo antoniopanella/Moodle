@@ -291,10 +291,11 @@
         },
         "postgresVersion": {
             "allowedValues": [
-                "9.5",
-                "9.6"
+                "9.6",
+                "10",
+                "11"
             ],
-            "defaultValue": "9.6",
+            "defaultValue": "11",
             "metadata": {
                 "description": "Postgresql version"
             },
