@@ -638,6 +638,46 @@
             },
             "type": "string"
         },
+        "redisCacheKU": {
+            "allowedValues": [
+                "Premium",
+                "Standard",
+                "Basic"
+            ],
+            "defaultValue": "Premium",
+            "metadata": {
+                "description": "Redis Cache SKU "
+            },
+            "type": "string"
+        },        
+        "redisCacheFamily": {
+            "allowedValues": [
+                "C",
+                "S",
+                "P"
+            ],
+            "defaultValue": "P",
+            "metadata": {
+                "description": "Redis Cache Familiy (Choose P for Premium SKU, Choose C For Standard and Basic Sku)"
+            },
+            "type": "string"
+        },
+        "redisCacheCapacity": {
+            "allowedValues": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6"
+            ],
+            "defaultValue": "1",
+            "metadata": {
+                "description": "Redis Cache Capacity (Valid values for Family: P = from 1 to 5, C = from 0 to 6)"
+            },
+            "type": "string"
+        },
         "vpnType": {
             "allowedValues": [
                 "RouteBased",

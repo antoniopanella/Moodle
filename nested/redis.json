@@ -24,9 +24,9 @@
             "properties": {
                 "enableNonSslPort": true,
                 "sku": {
-                    "capacity": 1,
-                    "family": "P",
-                    "name": "Premium"
+                    "capacity": "[parameters('moodleCommon').redisCacheCapacity]",
+                    "family": "[parameters('moodleCommon').redisCacheFamily]",
+                    "name": "[parameters('moodleCommon').redisCacheKU]"
                 },
                 "subnetId": "[parameters('subnetIdRedis')]"
             }
