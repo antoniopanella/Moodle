@@ -193,7 +193,7 @@ set -ex
     fi
     
     # install pre-requisites
-    sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa --yes
+    sudo add-apt-repository ppa:ubuntu-toolchain-r/ppa
     sudo apt-get -y update > /dev/null 2>&1
     # sudo apt-get install -y --fix-missing python-software-properties unzip
     sudo apt-get -y install software-properties-common
@@ -934,14 +934,7 @@ EOF
         sed -i "23 a \$CFG->alternative_file_system_class = '\\\tool_objectfs\\\azure_file_system';" /moodle/html/moodle/config.php
     fi
 
-   if [ "$dbServerType" = "postgres" ]; then
-     # Get a new version of Postgres to match Azure version
-     apt-get install curl ca-certificates gnupg
-     add-apt-repository "deb http://apt.postgresql.org/pub/repos/apt/ xenial-pgdg main"
-     wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-     apt-get update
-     apt-get install -y postgresql-client-9.6
-   fi
+  
 
    # create cron entry
    # It is scheduled for once per minute. It can be changed as needed.
