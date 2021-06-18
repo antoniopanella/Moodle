@@ -27,8 +27,7 @@
                     "capacity": "[parameters('moodleCommon').redisCacheCapacity]",
                     "family": "[parameters('moodleCommon').redisCacheFamily]",
                     "name": "[parameters('moodleCommon').redisCacheSKU]"
-                },
-                "subnetId": "[parameters('subnetIdRedis')]"
+                }
             }
         }
     ],
